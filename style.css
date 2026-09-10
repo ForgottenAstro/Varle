@@ -231,6 +231,11 @@ h2 i {
 	background-repeat: no-repeat;
 }
 
+.pic.has-image.fit-contain {
+	background-size: contain;
+	background-color: #050505;
+}
+
 .pic.gold {
 	background: radial-gradient(circle at 50% 40%, #f0d58d 0 2%, #987332 3% 7%, transparent 8%),
 		linear-gradient(145deg, #28200e, #050505);
