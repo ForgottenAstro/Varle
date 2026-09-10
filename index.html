@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>VAREL — Define Your Presence</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<a class="logo" href="#">VAREL</a>
+			<nav>
+				<a href="#shop">Shop</a>
+				<a href="#collections">Collections</a>
+				<a href="#about">About</a>
+			</nav>
+			<button id="cartBtn">BAG <b id="count">0</b></button>
+		</header>
+
+		<section class="hero">
+			<div>
+				<small>THE ESSENTIAL COLLECTION</small>
+				<h1>Be the one<br><i>everyone remembers.</i></h1>
+				<p>Refined accessories that speak for you.</p>
+				<a class="btn" href="#shop">SHOP COLLECTION →</a>
+			</div>
+		</section>
+
+		<section class="intro">
+			<small>VAREL / 001</small>
+			<h2>Less noise.<br><i>More presence.</i></h2>
+			<p>A considered collection of everyday pieces. Clean forms, restrained details and finishes made to complement you..</p>
+		</section>
+
+		<section id="shop" class="shop">
+			<div class="heading">
+				<div>
+					<small>CURATED PIECES</small>
+					<h2>Shop the collection</h2>
+				</div>
+				<div id="filters">
+					<button class="active" data-cat="all">All</button>
+					<button data-cat="chains">Chains</button>
+					<button data-cat="rings">Rings</button>
+					<button data-cat="bracelets">Bracelets</button>
+					<button data-cat="watches">Watches</button>  
+                    <button data-cat="belts">Belts</button>                  
+				</div>
+			</div>
+			<div id="products" class="grid"></div>
+		</section>
+
+		<section id="collections" class="collections">
+			<article>
+				<span>01 / CHAINS</span>
+				<h2>Built to layer.</h2>
+				<a href="#shop" data-filter="chains">EXPLORE →</a>
+			</article>
+			<article>
+				<span>02 / RINGS</span>
+				<h2>Quiet statement.</h2>
+				<a href="#shop" data-filter="rings">EXPLORE →</a>
+			</article>
+			<article class="wide">
+				<span>03 / TIME</span>
+				<h2>Every second.</h2>
+				<a href="#shop" data-filter="watches">EXPLORE →</a>
+			</article>
+		</section>
+
+		<section id="about" class="manifesto">
+			<small>OUR PHILOSOPHY</small>
+			<h2>Designed for the<br><i>distinction.</i></h2>
+			<p>The best accesories leaves a impression that doesn't need words.</p>
+		</section>
+
+		<section class="newsletter">
+			<small>THE VAREL LIST</small>
+			<h2>Stay in the know.</h2>
+			<p>New drops, private releases and things worth knowing.</p>
+			<form id="form">
+				<input type="email" required placeholder="Your email address">
+				<button class="btn">JOIN →</button>
+			</form>
+			<div id="message"></div>
+		</section>
+
+		<footer>
+			<div>
+				<a class="logo">VAREL</a>
+				<p>Accessories for a distinct presence.</p>
+			</div>
+			<div>
+				<b>SHOP</b>
+				<a href="#shop">All pieces</a>
+				<a href="#collections">Collections</a>
+			</div>
+			<div>
+				<b>HELP</b>
+				<a href="#">Shipping</a>
+				<a href="#">Returns</a>
+				<a href="#">Contact</a>
+			</div>
+			<div>
+				<b>SOCIAL</b>
+				<a href="#">Instagram</a>
+				<a href="#">TikTok</a>
+			</div>
+		</footer>
+
+		<aside id="drawer">
+			<div class="drawerHead">
+				<h2>Your bag</h2>
+				<button id="close">×</button>
+			</div>
+			<div id="items"></div>
+			<p id="empty">Your bag is currently empty.</p>
+			<div class="total">
+				<span>Subtotal</span>
+				<b id="subtotal">$0.00</b>
+			</div>
+			<button class="btn checkout" id="checkout">CHECKOUT →</button>
+			<small>Demo checkout — connect a payment provider before launch.</small>
+		</aside>
+
+		<div id="backdrop"></div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

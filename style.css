@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: #080808;
+	color: #eee;
+	font-family: 'DM Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button,
+input {
+	font: inherit;
+}
+
+header {
+	height: 76px;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 6vw;
+	background: #080808dd;
+	border-bottom: 1px solid #242424;
+	backdrop-filter: blur(12px);
+}
+
+.logo {
+	font-weight: 600;
+	letter-spacing: .35em;
+	font-size: 20px;
+}
+
+nav {
+	display: flex;
+	gap: 40px;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	color: #999;
+}
+
+nav a:hover {
+	color: #fff;
+}
+
+header button {
+	background: none;
+	border: 0;
+	color: #ddd;
+	font-size: 10px;
+	letter-spacing: .15em;
+	cursor: pointer;
+}
+
+header b {
+	border: 1px solid #555;
+	border-radius: 50%;
+	padding: 3px 6px;
+	margin-left: 5px;
+}
+
+.hero {
+	height: 100vh;
+	min-height: 650px;
+	display: flex;
+	align-items: end;
+	padding: 0 8vw 12vh;
+	position: relative;
+	overflow: hidden;
+	background: radial-gradient(circle at 73% 42%, #777 0 1%, #292929 12%, transparent 28%),
+		linear-gradient(115deg, #030303 0, #111 55%, #050505 100%);
+}
+
+.hero:after {
+	content: '';
+	position: absolute;
+	right: 12%;
+	top: 18%;
+	width: 34vw;
+	height: 62vh;
+	border: 1px solid #ffffff13;
+	transform: rotate(12deg);
+}
+
+.hero > div {
+	position: relative;
+	z-index: 1;
+	max-width: 700px;
+}
+
+.hero small,
+.intro small,
+.shop small,
+.manifesto small,
+.newsletter small {
+	color: #aaa;
+	font-size: 10px;
+	letter-spacing: .25em;
+}
+
+.hero h1 {
+	font: 500 clamp(64px, 9vw, 125px) /.9 'Playfair Display', serif;
+	margin: 22px 0;
+}
+
+.hero h1 i,
+h2 i {
+	font-weight: 500;
+}
+
+.hero p {
+	max-width: 390px;
+	color: #999;
+	margin-bottom: 30px;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #eee;
+	color: #080808;
+	border: 1px solid #eee;
+	padding: 16px 24px;
+	font-size: 10px;
+	letter-spacing: .16em;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: #c9a45c;
+	border-color: #c9a45c;
+}
+
+.intro,
+.shop,
+.manifesto,
+.newsletter {
+	padding: 130px 7vw;
+}
+
+.intro {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr 1fr;
+	gap: 40px;
+}
+
+.intro h2,
+.shop h2,
+.manifesto h2,
+.newsletter h2 {
+	font: 500 clamp(42px, 5vw, 75px) /.95 'Playfair Display', serif;
+	margin: 0;
+}
+
+.intro p,
+.manifesto p,
+.newsletter p {
+	color: #888;
+	max-width: 400px;
+}
+
+.shop {
+	padding-top: 50px;
+}
+
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	margin-bottom: 45px;
+}
+
+.heading h2 {
+	font-size: 52px;
+}
+
+.heading button {
+	background: none;
+	border: 0;
+	color: #666;
+	text-transform: uppercase;
+	font-size: 10px;
+	letter-spacing: .13em;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.heading button.active,
+.heading button:hover {
+	color: #c9a45c;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+}
+
+.product {
+	cursor: pointer;
+}
+
+.pic {
+	aspect-ratio: 3/4;
+	background: radial-gradient(circle at 50% 40%, #ddd 0 2%, #777 3% 6%, transparent 7%),
+		linear-gradient(145deg, #202020, #050505);
+	position: relative;
+}
+
+.pic.has-image {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.pic.gold {
+	background: radial-gradient(circle at 50% 40%, #f0d58d 0 2%, #987332 3% 7%, transparent 8%),
+		linear-gradient(145deg, #28200e, #050505);
+}
+
+.pic.watch {
+	background: radial-gradient(circle, #111 0 24%, #aaa 25% 28%, #222 29% 43%, transparent 44%),
+		linear-gradient(145deg, #222, #050505);
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	padding: 16px 0 30px;
+	font-size: 12px;
+}
+
+.info span:last-child {
+	color: #aaa;
+}
+
+.info p {
+	margin: 5px 0;
+	color: #666;
+	font-size: 10px;
+}
+
+.collections {
+	padding: 20px 7vw 130px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 14px;
+}
+
+.collections article {
+	height: 550px;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	background: radial-gradient(circle at 60% 40%, #666 0, transparent 20%),
+		linear-gradient(145deg, #222, #060606);
+}
+
+.collections article:nth-child(2) {
+	background: radial-gradient(circle at 45% 40%, #aaa 0, transparent 17%),
+		linear-gradient(125deg, #191919, #050505);
+}
+
+.collections .wide {
+	grid-column: 1/-1;
+	height: 450px;
+	background: radial-gradient(circle at 70% 40%, #806d4b 0, transparent 17%),
+		linear-gradient(120deg, #202020, #060606);
+}
+
+.collections span {
+	font-size: 10px;
+	letter-spacing: .2em;
+	color: #999;
+}
+
+.collections h2 {
+	font: 500 60px/1 'Playfair Display', serif;
+	margin: 15px 0 20px;
+}
+
+.collections a {
+	font-size: 10px;
+	letter-spacing: .18em;
+}
+
+.manifesto {
+	text-align: center;
+	background: #111;
+}
+
+.manifesto p {
+	margin: 30px auto;
+}
+
+.newsletter {
+	text-align: center;
+	background: #151515;
+}
+
+.newsletter p {
+	margin: 20px auto;
+}
+
+.newsletter form {
+	display: flex;
+	max-width: 500px;
+	margin: 30px auto;
+}
+
+.newsletter input {
+	flex: 1;
+	background: #090909;
+	border: 1px solid #333;
+	color: white;
+	padding: 15px;
+}
+
+.newsletter .btn {
+	min-width: 130px;
+}
+
+#message {
+	color: #c9a45c;
+	font-size: 11px;
+	margin-top: 12px;
+}
+
+footer {
+	padding: 70px 7vw 30px;
+	border-top: 1px solid #242424;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+	gap: 30px;
+}
+
+footer p {
+	color: #666;
+	font-size: 12px;
+}
+
+footer div {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+footer b {
+	font-size: 9px;
+	color: #666;
+	letter-spacing: .2em;
+	margin-bottom: 8px;
+}
+
+footer a:not(.logo) {
+	font-size: 11px;
+	color: #999;
+}
+
+#drawer {
+	position: fixed;
+	z-index: 20;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: min(440px, 100%);
+	background: #0d0d0d;
+	padding: 32px;
+	transform: translateX(105%);
+	transition: .35s;
+	display: flex;
+	flex-direction: column;
+}
+
+#drawer.open {
+	transform: none;
+}
+
+.drawerHead {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #292929;
+	padding-bottom: 20px;
+}
+
+.drawerHead h2 {
+	font: 500 32px 'Playfair Display', serif;
+	margin: 0;
+}
+
+.drawerHead button {
+	background: none;
+	border: 0;
+	color: #fff;
+	font-size: 28px;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: 65px 1fr auto;
+	gap: 14px;
+	padding: 18px 0;
+	border-bottom: 1px solid #222;
+}
+
+.thumb {
+	background: linear-gradient(145deg, #333, #080808);
+	aspect-ratio: 1;
+}
+
+.row h4 {
+	margin: 0;
+	font-size: 11px;
+}
+
+.row p {
+	color: #888;
+	font-size: 10px;
+}
+
+.row button {
+	background: none;
+	border: 0;
+	color: #777;
+	font-size: 10px;
+	cursor: pointer;
+}
+
+.qty {
+	font-size: 11px;
+	color: #aaa;
+}
+
+.qty button {
+	font-size: 16px;
+	margin: 0 7px;
+}
+
+.total {
+	margin-top: auto;
+	border-top: 1px solid #292929;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+}
+
+.checkout {
+	width: 100%;
+}
+
+#drawer > small {
+	text-align: center;
+	color: #555;
+	font-size: 9px;
+	margin-top: 10px;
+}
+
+#empty {
+	color: #666;
+	text-align: center;
+	margin: auto;
+}
+
+#backdrop {
+	position: fixed;
+	z-index: 10;
+	inset: 0;
+	background: #000b;
+	opacity: 0;
+	pointer-events: none;
+	transition: .3s;
+}
+
+#backdrop.open {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+@media (max-width: 850px) {
+	nav {
+		display: none;
+	}
+
+	.intro {
+		grid-template-columns: 1fr;
+	}
+
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.heading {
+		display: block;
+	}
+
+	.collections {
+		grid-template-columns: 1fr;
+	}
+
+	.collections .wide {
+		grid-column: auto;
+	}
+
+	.collections article {
+		height: 430px;
+	}
+
+	.collections .wide {
+		height: 380px;
+	}
+
+	.footer {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.hero h1 {
+		font-size: 65px;
+	}
+}
+
+@media (max-width: 520px) {
+	.hero {
+		padding: 0 6vw 11vh;
+	}
+
+	.intro,
+	.shop,
+	.manifesto,
+	.newsletter {
+		padding: 85px 6vw;
+	}
+
+	.grid {
+		gap: 10px;
+	}
+
+	.heading h2 {
+		font-size: 42px;
+	}
+
+	.collections {
+		padding: 10px 6vw 85px;
+	}
+
+	.collections article {
+		padding: 25px;
+	}
+
+	.collections h2 {
+		font-size: 45px;
+	}
+
+	.newsletter form {
+		display: block;
+	}
+
+	.newsletter input {
+		width: 100%;
+		margin-bottom: 8px;
+	}
+
+	.newsletter .btn {
+		width: 100%;
+	}
+
+	footer {
+		padding: 55px 6vw 25px;
+	}
+
+	.hero:after {
+		right: -10%;
+		width: 65vw;
+	}
+}
