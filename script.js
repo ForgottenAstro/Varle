@@ -1,13 +1,13 @@
 const products = [
-	{ id: 1, n: 'Chrome Chain', c: 'chains', p: 39.99, cl: '' },
-	{ id: 2, n: 'Aureum Chain', c: 'chains', p: 44.99, cl: 'gold' },
-	{ id: 3, n: 'Axis Ring', c: 'rings', p: 29.99, cl: '' },
-	{ id: 4, n: 'Vanta Ring', c: 'rings', p: 27.99, cl: 'gold' },
-	{ id: 5, n: 'Ethereal Bracelet', c: 'bracelets', p: 34.99, cl: '' },
-	{ id: 6, n: 'Noir Bracelet', c: 'bracelets', p: 36.99, cl: '' },
-	{ id: 7, n: 'Varel Chrono', c: 'watches', p: 89.99, cl: 'watch' },
-	{ id: 8, n: 'Aureum Time', c: 'watches', p: 94.99, cl: 'watch gold' },
-	{ id: 9, n: 'Leather belt', c: 'belts', p: 49.99, cl: '' },
+	{ id: 1, n: 'Chrome Chain', c: 'chains', p: 39.99, cl: '', image: 'images/chromechsin.jpg' },
+	{ id: 2, n: 'Aureum Chain', c: 'chains', p: 44.99, cl: 'gold', image: 'images/aurem.jpg' },
+	{ id: 3, n: 'Axis Ring', c: 'rings', p: 29.99, cl: '', image: 'images/Axis ring.jpg' },
+	{ id: 4, n: 'Vanta Ring', c: 'rings', p: 27.99, cl: 'gold', image: 'images/vanta ring.jpg' },
+	{ id: 5, n: 'Ethereal Bracelet', c: 'bracelets', p: 34.99, cl: '', image: 'images/Ethereal brace.jpg' },
+	{ id: 6, n: 'Noir Bracelet', c: 'bracelets', p: 36.99, cl: '', image: 'images/the-noir-back.webp' },
+	{ id: 7, n: 'Varel Chrono', c: 'watches', p: 89.99, cl: 'watch', image: 'images/chrono.jpg' },
+	{ id: 8, n: 'Aureum Time', c: 'watches', p: 94.99, cl: 'watch gold', image: 'images/aureum black watch.jpg' },
+	{ id: 9, n: 'Leather belt', c: 'belts', p: 49.99, cl: '', image: 'images/black belt.jpg' },
 ];
 
 let cart = JSON.parse(localStorage.varelCart || '[]');
